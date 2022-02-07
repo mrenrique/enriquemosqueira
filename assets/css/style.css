@@ -371,7 +371,7 @@ h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, h4:hover .a
 
 .category-tags { margin-top: .25rem !important; margin-bottom: .25rem !important; font-size: 105%; }
 
-.post-meta-title, .post-meta { margin-top: .25em !important; margin-bottom: .25em !important; font-size: 105%; }
+.post-meta-title, .post-meta { margin-top: .25em !important; margin-bottom: .25em !important; font-size: 70%; }
 
 .page-description { margin-top: .5rem !important; margin-bottom: .5rem !important; color: #585858; font-size: 115%; }
 
@@ -459,9 +459,13 @@ h1, h2, h3, h4, h5, h6 { color: #ff6f3c; }
 
 @media screen and (min-width: 800px) { .main-area { flex-direction: row; padding: 10%; } .description { width: 75%; } .photo { margin-left: 5%; margin-bottom: 0%; max-width: 350px; } }
 
-.post-list { line-height: 2; }
+.post-list { color: #ff6f3c; display: flex; flex-wrap: wrap; }
 
-.post-link { font-size: 1.7rem; font-weight: 650; color: #ff6f3c; }
+.post-list > li { background-color: #fdfdfd; flex: 50%; }
+
+.post-list > li > .box { height: 100%; }
+
+.post-link { font-size: 1.25rem; font-weight: 550; color: #ff6f3c; line-height: 1.3; }
 
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
