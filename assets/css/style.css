@@ -333,6 +333,8 @@ img.emoji { display: inline !important; vertical-align: baseline !important; }
 
 .post-content p, .post-content li { font-size: 20px; color: #ff6f3c; }
 
+.post-title { margin-top: 2.5rem !important; color: #ff6f3c !important; }
+
 .post-link { font-weight: normal; }
 
 h1 { margin-top: 2.5rem !important; }
