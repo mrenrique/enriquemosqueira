@@ -148,19 +148,25 @@ h1, h2, h3, h4, h5, h6{
 .post-list{
 // 	margin: 0;
 // 	padding: 3% 0;
-	line-height: 2;
+	color: $main-color;
+	display: flex;
+        flex-wrap: wrap;
 }
 
-// .post-list > li{
-// 	background-color: $font-color;
-// 	margin: 2%;
-// 	padding: 5%;
-// }
+.post-list > li{
+	background-color: $font-color;
+	flex: 50%;
+}
+
+.post-list > li > .box{
+	height: 100%;
+}
 
 .post-link {
-	font-size: 1.7rem;
-	font-weight: 650;
+	font-size: 1.25rem;
+	font-weight: 550;
 	color: $main-color;
+	line-height: 1.3;
 }
 
 
