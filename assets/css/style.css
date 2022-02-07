@@ -331,7 +331,7 @@ img.emoji { display: inline !important; vertical-align: baseline !important; }
 
 .page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: Roboto, "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important; letter-spacing: -0.016em; }
 
-.post-content p, .post-content li { font-size: 20px; color: #585858; }
+.post-content p, .post-content li { font-size: 20px; color: #fdfdfd; }
 
 .post-title { margin-top: 2.5rem !important; color: #ff6f3c !important; }
 
