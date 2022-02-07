@@ -331,7 +331,7 @@ img.emoji { display: inline !important; vertical-align: baseline !important; }
 
 .page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: Roboto, "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important; letter-spacing: -0.016em; }
 
-.post-content p, .post-content li { font-size: 20px; color: #ff6f3c; }
+.post-content p, .post-content li { font-size: 20px; color: #585858; }
 
 .post-title { margin-top: 2.5rem !important; color: #ff6f3c !important; }
 
@@ -379,7 +379,7 @@ h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, h4:hover .a
 
 .category-tags-icon { font-size: 75% !important; padding-left: 0.375em; opacity: 35%; }
 
-.category-tags-link { color: #182a41 !important; font-weight: 500; background: #ff9900; border-radius: 8px; padding: 4px 8px; font-size: 13px !important; }
+.category-tags-link { color: #ffffff !important; font-weight: 500; background: #ff9900; border-radius: 8px; padding: 4px 8px; font-size: 13px !important; }
 
 .js-search-results { padding-top: 0.2rem; }
 
