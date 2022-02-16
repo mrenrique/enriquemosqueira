@@ -4,7 +4,9 @@ title: About Me
 permalink: /about/
 ---
 
-Hello World (👋🌎) I'm a Data Analyst 👨‍💼📊 who enjoys coding 👨‍💻 & drinking ☕. My current learning focus is on generating **Quality Assurance Dashboards** to help stakeholders make **data-driven decisions**. To do so, I used **Power BI + Python**.
+Hello World (👋🌎)
+
+I'm a **Data Analyst** 👨‍💼📊 who enjoys coding 👨‍💻 & drinking ☕. My current learning focus is on generating **Quality Assurance Dashboards** to help stakeholders make **data-driven decisions**. To do so, I used **Power BI + Python**.
 
 I'm also doing side hustles on **Machine Learning** 🤖 and **Deep Learning** 🧠.
 
