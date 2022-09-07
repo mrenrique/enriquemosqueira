@@ -1537,7 +1537,7 @@ Length: 62, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's present the same as before but using a <code>boxplot</code> graph that help us to undestard the data ranges by quartiles and also point out any outlies that lies aoutside the whiskers.</p>
+<p>Let's present the same as before but using a <code>boxplot</code> graph that help us to undestard the data ranges by quartiles and also point out any outlies that lies outside the whiskers.</p>
 
 </div>
 </div>
@@ -1594,7 +1594,7 @@ Length: 62, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From above, we can tell that many videos has less than 1 Million views and that there are some outiesl, even so, 3 of them has over 40 million views</p>
+<p>From above, we can tell that many videos has less than 1 Million views and that there are some outiers, even so, 3 of them has over 40 million views.</p>
 <p>How behaves the <code>Likes</code> feature?</p>
 
 </div>
@@ -1649,6 +1649,15 @@ Length: 62, dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Many of the videos are quite popular &amp; likeables, they range from between 100k &amp; 300k of likes, except for the outlier that has more than 700k.</p>
+<p>Now let's analyzed the opposite, the <code>dislikes</code> feature.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1701,179 +1710,7 @@ Length: 62, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">'SNK'</span><span class="p">)]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>title</th>
-      <th>Freestyler A</th>
-      <th>Freestyler B</th>
-      <th>views</th>
-      <th>year</th>
-      <th>length</th>
-      <th>likes</th>
-      <th>dislikes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>14</th>
-      <td>14</td>
-      <td>NAICEN vs SNK</td>
-      <td>Naicen</td>
-      <td>Snk</td>
-      <td>66128</td>
-      <td>2020</td>
-      <td>00:06:44</td>
-      <td>3196</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>22</td>
-      <td>JAZE vs SNK</td>
-      <td>Jaze</td>
-      <td>Snk</td>
-      <td>1407134</td>
-      <td>2019</td>
-      <td>00:07:06</td>
-      <td>28687</td>
-      <td>890</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>24</td>
-      <td>SNK vs ZASKO MASTER</td>
-      <td>Snk</td>
-      <td>Zasko Master</td>
-      <td>588253</td>
-      <td>2019</td>
-      <td>00:06:02</td>
-      <td>14385</td>
-      <td>583</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>26</td>
-      <td>SNK vs ACZINO</td>
-      <td>Snk</td>
-      <td>Aczino</td>
-      <td>1204854</td>
-      <td>2019</td>
-      <td>00:06:58</td>
-      <td>24243</td>
-      <td>473</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>27</td>
-      <td>SNK vs BNET</td>
-      <td>Snk</td>
-      <td>Bnet</td>
-      <td>2154417</td>
-      <td>2019</td>
-      <td>00:09:01</td>
-      <td>40675</td>
-      <td>1061</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'2018'</span><span class="p">]</span>
-<span class="c1"># do the same</span>
-<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="s1">'2018'</span><span class="p">)]</span>
-
-<span class="c1"># show all rows but not of this years</span>
-<span class="n">data</span><span class="p">[</span><span class="o">~</span><span class="n">data</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="s1">'2018'</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">' vs '</span><span class="p">)]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">years</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">2017</span><span class="p">]</span>
-<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">years</span><span class="p">)]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<p>Many of the videos falls into the range of 0k to 25k of dislikes, which is okey for videos with views over 170k  and likes on average of +20k</p>
 
 </div>
 </div>
@@ -1885,6 +1722,22 @@ Length: 62, dtype: int64</pre>
 <a class="anchor" href="#How-They-Behave-if-We-Put-Them-Together?-%F0%9F%A4%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>How They Behave if We Put Them Together? 🤔<a class="anchor-link" href="#How-They-Behave-if-We-Put-Them-Together?-%F0%9F%A4%94"> </a>
 </h3>
 <p>Bivariate Analysis</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's moving on to find out how these featues behave when we analyzed them together.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see that, on average, many views were gathered mostly in 2019 &amp; 2015, the latter one also surpass the other four years. Also, the year with less views was 2020.</p>
 
 </div>
 </div>
@@ -1929,6 +1782,14 @@ Length: 62, dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When plotting the views by year, it's noticeable that most years, except for 2020, have outlies which will increment the average of views. Furthermore, 2005, 2018 y 2019 have battle videos (outliers) with more than 40M of views.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2009,6 +1870,14 @@ Length: 62, dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here, we can see that videos from 2018 and 2019 has the most number of likes (+700K). Also, except for 2019, most years has a close range with not much variation.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
