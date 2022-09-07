@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -183,6 +183,32 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In order to achieve the goal of this project, It's necesary to install &amp; import some libraries that will make our life a lot easier.</p>
+<ul>
+<li>
+<code>Numpy</code> for doing mathematical operations</li>
+<li>
+<code>Pandas</code> for manipulating structured data &amp; making EDA</li>
+<li>
+<code>Matplotlib</code> &amp; <code>Seaborn</code>, this one help us create graphs to visually understand the EDA</li>
+<li>
+<code>Datetime</code> will make the task of dealing with time data a lot easier</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Once imported all the libraries requieres, let's also check their version as reference.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -196,7 +222,6 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importing libraries</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -242,6 +267,14 @@ Seaborn version: 0.11.2
 <h2 id="Customized-Settings-🎨">
 <a class="anchor" href="#Customized-Settings-%F0%9F%8E%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Customized Settings 🎨<a class="anchor-link" href="#Customized-Settings-%F0%9F%8E%A8"> </a>
 </h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the hidden code cell bellow there is two functions, both of them customizes som of the default parameters of the graphs, to make them look a bit cleaner and easy to digest</p>
+
 </div>
 </div>
 </div>
@@ -323,6 +356,15 @@ Seaborn version: 0.11.2
 <h2 id="Importing-dataset-🗃️">
 <a class="anchor" href="#Importing-dataset-%F0%9F%97%83%EF%B8%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Importing dataset 🗃️<a class="anchor-link" href="#Importing-dataset-%F0%9F%97%83%EF%B8%8F"> </a>
 </h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's start by importing from Github the tidy dataset which was a result from the previous tutorial. This tutorial covered <a href="https://mrenrique.github.io/blog/data%20preprocessing/python/data%20science/pandas/numpy/2021/01/10/data-preprocessing-with-pandas-numpy.html">Data Preprocessing Videos Details of a Youtube Channel</a></p>
+<p>Also, I'll print 3 random rows to check the dataset was imported succesfully.</p>
+
 </div>
 </div>
 </div>
@@ -513,6 +555,39 @@ Seaborn version: 0.11.2
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's get a glance of the structure of the dataset and their properties</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, I'll start with some modifications on the features. From above, I noticed that the column <code>length</code> has time related values, so it's requiered to give it a proper format and assign the data type.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -557,6 +632,40 @@ memory usage: 5.0+ KB
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How about the videos title? Are there any duplicated value?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Almost correct, except for the name of a Frestyler which appears as <code>VALLES T</code> and <code>VALLEST</code>. Since it make reference to the same artist, we go on and replace the assure only one way of naming him.</p>
+<p>We'll check the changes by filtering part of his nicknake that contain <code>VALLES</code> in <code>title</code> column</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -604,6 +713,14 @@ Name: title, dtype: object</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One these changes were made, we're good to go to enrich the dataset.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1974,7 +2091,7 @@ Length: 62, dtype: int64</pre>
                  <span class="n">height</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 
 <span class="n">g</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span> <span class="c1"># adjust the Figure in g</span>
-<span class="n">g</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">'Relationshitp Between Views &amp; Likes By Year'</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">'Relationshitp Between Views &amp; Likes By Year'</span><span class="p">);</span>
 </pre></div>
 
     </div>
