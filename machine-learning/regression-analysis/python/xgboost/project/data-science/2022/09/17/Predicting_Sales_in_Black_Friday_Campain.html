@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>How Much a Client will Spend During Black Friday Event? Let’s Find Out By Using ML Algorithms 🤖👨‍🏫 | Data Science Portfolio</title>
+<title>How Much a Client will Spend 🤑 During Black Friday Event? Let’s Find Out By Using ML Algorithms 🤖👨‍🏫 | Data Science Portfolio</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="How Much a Client will Spend During Black Friday Event? Let’s Find Out By Using ML Algorithms 🤖👨‍🏫" />
+<meta property="og:title" content="How Much a Client will Spend 🤑 During Black Friday Event? Let’s Find Out By Using ML Algorithms 🤖👨‍🏫" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is and end-to-end machine learning project with the goal of Predicting Black Friday Purchase by a client with specific features." />
 <meta property="og:description" content="This is and end-to-end machine learning project with the goal of Predicting Black Friday Purchase by a client with specific features." />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-17T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://mrenrique.github.io/blog/machine-learning/regression-analysis/python/xgboost/project/data-science/2022/09/17/Predicting_Sales_in_Black_Friday_Campain.html","@type":"BlogPosting","headline":"How Much a Client will Spend During Black Friday Event? Let’s Find Out By Using ML Algorithms 🤖👨‍🏫","dateModified":"2022-09-17T00:00:00-05:00","datePublished":"2022-09-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrenrique.github.io/blog/machine-learning/regression-analysis/python/xgboost/project/data-science/2022/09/17/Predicting_Sales_in_Black_Friday_Campain.html"},"image":"https://mrenrique.github.io/blog/images/Black-Friday-Sales-machine-learning.png","description":"This is and end-to-end machine learning project with the goal of Predicting Black Friday Purchase by a client with specific features.","@context":"https://schema.org"}</script>
+{"url":"https://mrenrique.github.io/blog/machine-learning/regression-analysis/python/xgboost/project/data-science/2022/09/17/Predicting_Sales_in_Black_Friday_Campain.html","@type":"BlogPosting","headline":"How Much a Client will Spend 🤑 During Black Friday Event? Let’s Find Out By Using ML Algorithms 🤖👨‍🏫","dateModified":"2022-09-17T00:00:00-05:00","datePublished":"2022-09-17T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrenrique.github.io/blog/machine-learning/regression-analysis/python/xgboost/project/data-science/2022/09/17/Predicting_Sales_in_Black_Friday_Campain.html"},"image":"https://mrenrique.github.io/blog/images/Black-Friday-Sales-machine-learning.png","description":"This is and end-to-end machine learning project with the goal of Predicting Black Friday Purchase by a client with specific features.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mrenrique.github.io/blog/feed.xml" title="Data Science Portfolio" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,13 +72,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">How Much a Client will Spend During Black Friday Event? Let&#39;s Find Out By Using ML Algorithms 🤖👨‍🏫</h1><p class="page-description">This is and end-to-end machine learning project with the goal of Predicting Black Friday Purchase by a client with specific features.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-17T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">How Much a Client will Spend 🤑 During Black Friday Event? Let&#39;s Find Out By Using ML Algorithms 🤖👨‍🏫</h1><p class="page-description">This is and end-to-end machine learning project with the goal of Predicting Black Friday Purchase by a client with specific features.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-17T00:00:00-05:00" itemprop="datePublished">
         Sep 17, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      20 min read
     
 </span></p>
 
@@ -182,15 +182,10 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h3"><a href="#Scaling-Data">Scaling Data </a></li>
-<li class="toc-entry toc-h3"><a href="#Splitting-the-data-📍-📌">Splitting the data 📍 📌 </a></li>
+<li class="toc-entry toc-h3"><a href="#Splitting-the-data">Splitting the data </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Building-&-Evaluating-Model(s)-🤖👨‍🏫">Building &amp; Evaluating Model(s) 🤖👨‍🏫 </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Hyperparameter-tuning">Hyperparameter tuning </a></li>
-<li class="toc-entry toc-h3"><a href="#Final-Evaluation">Final Evaluation </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#Building-&-Evaluating-Model(s)-🤖👨‍🏫">Building &amp; Evaluating Model(s) 🤖👨‍🏫 </a></li>
 <li class="toc-entry toc-h2"><a href="#Results-Explanation">Results Explanation </a></li>
 </ul><!--
 #################################################
@@ -426,7 +421,7 @@ Scikit-Learn 1.0.2
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the hidden code cell bellow there is two functions, both of them customizes som of the default parameters of the graphs, to make them look a bit cleaner and easy to digest. The code bellow customize font size, color pallete, figsize, show data labels, despine graphs and more.</p>
+<p>In the hidden code cell bellow there are two functions, both of them customizes some of the default parameters of the graphs, to make them look a bit cleaner and easy to digest. The code bellow customize font size, color pallete, figsize, show data labels, despine graphs and more.</p>
 
 </div>
 </div>
@@ -2314,6 +2309,14 @@ Name: Product_Category_1, dtype: float64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Many of the income comes from people around 26-35 years old.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2365,7 +2368,7 @@ Name: Product_Category_1, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<p>The Purchase habits of different Genders across the different City Categories.</p>
 
 </div>
 </div>
@@ -2380,9 +2383,8 @@ Name: Product_Category_1, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#the purchase habits of different genders across the different city categories.</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">"City_Category"</span><span class="p">)</span>
-<span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">,</span> <span class="s2">"Gender"</span><span class="p">,</span> <span class="s2">"Purchase"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">'City_Category'</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">,</span> <span class="s1">'Gender'</span><span class="p">,</span> <span class="s1">'Purchase'</span><span class="p">)</span>
 <span class="n">customPlotSettings</span><span class="p">(</span><span class="n">figW</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
 
 <span class="c1"># SHOW IN COLUMNS BETTER THAN FACETGRID [still note useful]</span>
@@ -2423,6 +2425,14 @@ Name: Product_Category_1, dtype: float64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How Much Purchases By City_Category &amp; Gender? Male people from City_Category B are the most common clients.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2433,8 +2443,7 @@ Name: Product_Category_1, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Complex question: HOW MUCH Purchase BY City_Category &amp; GENDER</span>
-<span class="n">g</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span>
     <span class="n">data</span><span class="o">=</span><span class="n">train_data</span><span class="p">,</span>
     <span class="n">x</span><span class="o">=</span><span class="s1">'City_Category'</span><span class="p">,</span>
     <span class="n">y</span><span class="o">=</span><span class="s1">'Purchase'</span><span class="p">,</span>
@@ -2443,6 +2452,7 @@ Name: Product_Category_1, dtype: float64</pre>
     <span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span>
     <span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">]</span>
 <span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Count of Purchase By City_Category and Gender'</span><span class="p">)</span>
 
 <span class="n">customPlotSettings</span><span class="p">(</span><span class="n">figW</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
@@ -2472,6 +2482,14 @@ Name: Product_Category_1, dtype: float64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How Much Purchases By City_Category &amp; Status? Many costumers are single people coming from City_Category B</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2482,8 +2500,7 @@ Name: Product_Category_1, dtype: float64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Complex question: HOW MUCH Purchase BY City_Category &amp; GENDER</span>
-<span class="n">g</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span>
     <span class="n">data</span><span class="o">=</span><span class="n">train_data</span><span class="p">,</span>
     <span class="n">x</span><span class="o">=</span><span class="s1">'City_Category'</span><span class="p">,</span>
     <span class="n">y</span><span class="o">=</span><span class="s1">'Purchase'</span><span class="p">,</span>
@@ -2778,9 +2795,25 @@ Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdo
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we explore and try to respond some questions which help us gather some intel about the dataset. Now we're good to go to the next phase perform some pre-processing techniques to ensure accurate results. We can later use it to train the ml model(s).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Infinite-Values">
 <a class="anchor" href="#Infinite-Values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Infinite Values<a class="anchor-link" href="#Infinite-Values"> </a>
 </h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's start by checking if there is any infinite number.</p>
+
 </div>
 </div>
 </div>
@@ -2833,7 +2866,7 @@ Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdo
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's first check the number of Missing Values for each feature</p>
+<p>Now, it's time to check the number of Missing Values for each feature</p>
 
 </div>
 </div>
@@ -2934,24 +2967,14 @@ dtype: float64</pre>
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">REMOVE</span> <span class="n">Or</span> <span class="n">NO</span> <span class="n">ID</span> <span class="n">COLUMN</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">train_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'Product_ID'</span><span class="p">,</span> <span class="s1">'User_ID'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since there are some missing values on 3 columns, we'll fill them up using the mean imputation strategy.</p>
 
 </div>
-    
-
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3011,6 +3034,14 @@ dtype: int64</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Also, let's check if any duplicated rows within the dataset.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3056,6 +3087,14 @@ Index: []
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We need to be aware of atypical values a.k.a outliers. They contain a different story and we need to make further analysis to find out their value, but when trainning a model we need to remove them because they can mislead the learning phase ending up with less acurate models.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3096,6 +3135,14 @@ Index: []
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are a few values lying outside. Let's take a look at the Z-Score and check if they are above the usual threshold level.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3135,6 +3182,14 @@ Index: []
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Looks like there wasn't any outliers after all. Let's get going to the next phase.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Backup">
 <a class="anchor" href="#Backup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Backup<a class="anchor-link" href="#Backup"> </a>
 </h3>
@@ -3170,7 +3225,7 @@ Index: []
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For this dataset, there are a few features and are straightforward, there is no need for doing feature engineering, so, let's move on to the next phase.</p>
+<p>For this dataset, there are a few features and are straightforward, there is no need for doing feature engineering. So, let's move on to the next phase.</p>
 
 </div>
 </div>
@@ -3204,7 +3259,7 @@ Index: []
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First, let's remember the dataset structure by showing the first 3 rows.</p>
+<p>First, let's remember the dataset's structure by showing the first 3 rows.</p>
 
 </div>
 </div>
@@ -3398,6 +3453,14 @@ Index: []
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, let's identify the numerical features.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3438,6 +3501,14 @@ dtype: object</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And how about the categorical features?</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3488,6 +3559,14 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Since models can't understand anything but zeros and ones, it's required to parse all features to numerical type.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Pase-All-Features-to-Numeric">
 <a class="anchor" href="#Pase-All-Features-to-Numeric" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pase All Features to Numeric<a class="anchor-link" href="#Pase-All-Features-to-Numeric"> </a>
 </h4>
@@ -3530,6 +3609,14 @@ dtype: object</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Converting Gender to Binary.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3537,8 +3624,7 @@ dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Converting Gender to Binary</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">'Gender'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'M'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">:</span><span class="mi">0</span><span class="p">}})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">'Gender'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'M'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">:</span><span class="mi">0</span><span class="p">}})</span>
 
 <span class="n">data</span><span class="p">[</span><span class="s1">'Gender'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
@@ -3568,6 +3654,14 @@ Name: Gender, dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Converting Age to Numerical values.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3575,8 +3669,7 @@ Name: Gender, dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Converting Age to Numerical values</span>
-<span class="n">age_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'0-17'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'18-25'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'26-35'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'36-45'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'46-50'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'51-55'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">'55+'</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'0-17'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'18-25'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'26-35'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'36-45'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'46-50'</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'51-55'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">'55+'</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">line</span><span class="p">:</span> <span class="n">age_dict</span><span class="p">[</span><span class="n">line</span><span class="p">])</span>
 
 <span class="n">data</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -3612,6 +3705,14 @@ Name: Age, dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Converting city_category to Binary.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3619,8 +3720,7 @@ Name: Age, dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Converting city_category to Binary</span>
-<span class="n">city_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'A'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">city_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'A'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">'City_Category'</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'City_Category'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">line</span><span class="p">:</span> <span class="n">city_dict</span><span class="p">[</span><span class="n">line</span><span class="p">])</span>
 
 <span class="n">data</span><span class="p">[</span><span class="s1">'City_Category'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -3652,6 +3752,14 @@ Name: City_Category, dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Converting Stay_In_Current_City_Years to Binary.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3659,10 +3767,8 @@ Name: City_Category, dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Converting Stay_In_Current_City_Years to Binary</span>
-<span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 
-<span class="c1"># New variable for outlet</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">'Stay_In_Current_City_Years'</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">'Stay_In_Current_City_Years'</span><span class="p">])</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">'Stay_In_Current_City_Years'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
@@ -3695,6 +3801,14 @@ Name: Stay_In_Current_City_Years, dtype: int64</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Once all was done, we need to verify that all feartures are Numerical.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -3752,7 +3866,7 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Encoding rest of the categorical variables</p>
+<p>Encoding rest of the categorical variables.</p>
 
 </div>
 </div>
@@ -3801,7 +3915,7 @@ dtype: object</pre>
 <h3 id="Scaling-Data">
 <a class="anchor" href="#Scaling-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scaling Data<a class="anchor-link" href="#Scaling-Data"> </a>
 </h3>
-<p>Standardize the dataset using Feature Scaling</p>
+<p>Standardize the dataset using Feature Scaling to avoid bias over features with large values on the dataset.</p>
 
 </div>
 </div>
@@ -4193,9 +4307,17 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Splitting-the-data-📍-📌">
-<a class="anchor" href="#Splitting-the-data-%F0%9F%93%8D-%F0%9F%93%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Splitting the data 📍 📌<a class="anchor-link" href="#Splitting-the-data-%F0%9F%93%8D-%F0%9F%93%8C"> </a>
+<h3 id="Splitting-the-data">
+<a class="anchor" href="#Splitting-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Splitting the data<a class="anchor-link" href="#Splitting-the-data"> </a>
 </h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that we performed all processing tasks to ensure the dataset is ready to use for trainning a model, we can return back to separate them into trainning and testing datasets.</p>
+
 </div>
 </div>
 </div>
@@ -4230,15 +4352,7 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>
-<p><a href="https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/section-3-structured-data-projects/end-to-end-heart-disease-classification.ipynb">https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/section-3-structured-data-projects/end-to-end-heart-disease-classification.ipynb</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=OtD8wVaFm6E">understand how the algorithm works</a></p>
-</li>
-<li><a href="https://blog.cambridgespark.com/hyperparameter-tuning-in-xgboost-4ff9100a3b2f">explanation of hyperparameter tuning</a></li>
-</ul>
+<p>Finally we're in the most waited phase... Let's train some models that help us achieved this project's goal: Predict the Purchase Amount a costumer will spend during Black Friday.</p>
 
 </div>
 </div>
@@ -4340,6 +4454,14 @@ dtype: object</pre>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This gives us some numbers to compare these trained models. Let's compare them visually for better understanding. For the image bellow, we can say that XGBRegressor is the model that gives better results overall among these 04 models.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -4377,18 +4499,8 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hyperparameter-tuning">
-<a class="anchor" href="#Hyperparameter-tuning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hyperparameter tuning<a class="anchor-link" href="#Hyperparameter-tuning"> </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Final-Evaluation">
-<a class="anchor" href="#Final-Evaluation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Evaluation<a class="anchor-link" href="#Final-Evaluation"> </a>
-</h3>
+<p>Here, we can use <strong>Hyperparameter Tuning</strong> to improve the results and then make the <strong>Final Evaluation</strong>, but for now we can use this as a first deliberable.</p>
+
 </div>
 </div>
 </div>
@@ -4401,6 +4513,14 @@ dtype: object</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After all the trainning and evaluation on the models, we ended up with XGBRegressor model which is ready to use to predict the Purchase Amount of a customer. The last thing to do is figure out the feature importance that could gives us a better understanding which features are important to predict that and contrast that using the business knowledge from the experts/stakeholdes.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -4408,9 +4528,14 @@ dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_importance</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="s1">'XGBRegressor'</span><span class="p">]</span><span class="o">.</span><span class="n">get_booster</span><span class="p">()</span><span class="o">.</span><span class="n">get_score</span><span class="p">(</span><span class="n">importance_type</span><span class="o">=</span><span class="s1">'gain'</span><span class="p">)</span> <span class="c1"># xgb2 is the model</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_importance</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="s1">'XGBRegressor'</span><span class="p">]</span><span class="o">.</span><span class="n">get_booster</span><span class="p">()</span><span class="o">.</span><span class="n">get_score</span><span class="p">(</span><span class="n">importance_type</span><span class="o">=</span><span class="s1">'gain'</span><span class="p">)</span>
 
-<span class="n">importance_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">f_importance</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">'index'</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'importance'</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'importance'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># sort the values in the dataframe by importance in descending order</span>
+<span class="n">importance_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">f_importance</span><span class="p">,</span>
+    <span class="n">orient</span><span class="o">=</span><span class="s1">'index'</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'importance'</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'importance'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># sort the values in the dataframe by importance in descending order</span>
+
 <span class="n">importance_df</span>
 </pre></div>
 
@@ -4580,7 +4705,7 @@ dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The most important feature of the dataset is Product_Category_1</p>
+<p>As we can see from the bellow image, the most important feature of the dataset is Product_Category_1. As always, let's plot this data to understand it in a visual way.</p>
 
 </div>
 </div>
@@ -4602,7 +4727,7 @@ dtype: object</pre>
     <span class="n">hatch</span><span class="o">=</span><span class="s1">'*'</span>
 <span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span> <span class="c1"># Rotates X-Axis Ticks by 45-degrees</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span> <span class="c1"># Rotates X-Axis Ticks by 45-degrees</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
